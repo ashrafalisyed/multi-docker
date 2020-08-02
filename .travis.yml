@@ -2,7 +2,10 @@ sudo: required
 services:
   - docker
   
-language: generic 
+language: generic
+
+before_install:
+    - docker build -t ashrafsyed77/react-test -f Dockerfile.dev . 
 
 
 after_success:
